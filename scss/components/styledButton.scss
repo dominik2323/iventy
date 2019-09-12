@@ -1,0 +1,37 @@
+.btn {
+  display: inline-block;
+  min-width: 255px;
+  height: 55px;
+  padding: 20px 40px;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 0px;
+  color: $white;
+  border: 0;
+  border-radius: calc(55px / 2);
+  cursor: pointer;
+  &:hover {
+    opacity: 0.9;
+  }
+  &--blue {
+    width: auto;
+    background: $blue;
+  }
+  &--red {
+    background: $red;
+  }
+  &--ghost {
+    background: transparent;
+    border: 1px solid $gray;
+    color: $blue;
+    &:hover {
+      background: $red;
+      border: 1px solid $red;
+      color: $white;
+    }
+    &--red {
+      border: 1px solid $red;
+      color: $red;
+    }
+  }
+}

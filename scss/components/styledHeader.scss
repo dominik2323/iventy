@@ -1,0 +1,16 @@
+.header {
+  margin: 100px auto;
+  width: cols(8);
+  h1,
+  p {
+    text-align: center;
+  }
+  h1 {
+  }
+  p {
+    margin-top: 40px;
+  }
+  @media screen and (max-width: 1100px) {
+    width: cols(12);
+  }
+}

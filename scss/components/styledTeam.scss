@@ -1,0 +1,36 @@
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .header {
+    margin-top: 0;
+  }
+  &__member {
+    &:nth-child(2) {
+      margin-top: 150px;
+    }
+    width: 45%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+    h3,
+    li {
+      text-align: center;
+    }
+    h3 {
+      margin: 20px 0 50px;
+    }
+  }
+  @media screen and (max-width: 1100px) {
+    flex-direction: column;
+    &__member {
+      &:nth-child(2) {
+        margin-top: 0;
+        margin-bottom: 150px;
+      }
+      width: 100%;
+      padding: 0 20px;
+    }
+  }
+}

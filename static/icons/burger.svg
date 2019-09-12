@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <g id="burger" transform="translate(-305 -20)">
+    <circle id="Ellipse_55" data-name="Ellipse 55" cx="25" cy="25" r="25" transform="translate(305 20)" fill="#3a486a"/>
+    <rect id="Rectangle_76" data-name="Rectangle 76" width="20" height="2" rx="1" transform="translate(320 38)" fill="#fff"/>
+    <rect id="Rectangle_77" data-name="Rectangle 77" width="20" height="2" rx="1" transform="translate(320 44)" fill="#fff"/>
+    <rect id="Rectangle_78" data-name="Rectangle 78" width="20" height="2" rx="1" transform="translate(320 50)" fill="#fff"/>
+  </g>
+</svg>

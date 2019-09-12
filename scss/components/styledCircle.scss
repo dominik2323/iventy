@@ -1,0 +1,54 @@
+.circle {
+  border-radius: 100%;
+  background-color: crimson;
+  position: absolute;
+  z-index: -1;
+  &.small {
+    width: 25vw * 2;
+    height: 25vw * 2;
+    &.left {
+      left: -12vw * 2;
+    }
+    &.right {
+      right: -12vw * 2;
+    }
+  }
+  &.large {
+    width: 33vw * 2;
+    height: 33vw * 2;
+    &.left {
+      left: -16vw * 2;
+    }
+    &.right {
+      right: -16vw * 2;
+    }
+  }
+  &.light-blue {
+    background: $circle-light-blue;
+  }
+  &.dark-blue {
+    background: $circle-dark-blue;
+  }
+  &.red {
+    background: $circle-red;
+  }
+  &.orange {
+    background: $circle-orange;
+  }
+  &.yellow {
+    background: $circle-yellow;
+  }
+  @media screen and (max-width: 1100px) {
+    display: none;
+  }
+}
+
+.mask-circle {
+  overflow: hidden;
+  width: 100%;
+  z-index: -1;
+  height: 350px;
+  left: 0;
+  position: absolute;
+  transform: translateY(-300px);
+}
