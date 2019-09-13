@@ -56,15 +56,16 @@ export default function Index(props) {
 
 Index.getInitialProps = async function() {
   const { serverRuntimeConfig: serverVars } = getConfig();
+  console.log(process.env.apiKey);
   if (!firebase.apps.length) {
     firebase.initializeApp({
-      apiKey: serverVars.apiKey,
-      authDomain: serverVars.authDomain,
-      databaseURL: serverVars.databaseURL,
-      projectId: serverVars.projectId,
-      storageBucket: serverVars.storageBucket,
-      messagingSenderId: serverVars.messagingSenderId,
-      appId: serverVars.appId
+      apiKey: process.env.apiKey,
+      authDomain: process.env.authDomain,
+      databaseURL: process.env.databaseURL,
+      projectId: process.env.projectId,
+      storageBucket: process.env.storageBucket,
+      messagingSenderId: process.env.messagingSenderId,
+      appId: process.env.appId
     });
   }
   const contentRef = firebase.firestore().collection('content');
