@@ -1,6 +1,5 @@
 {
   "env": {
-    "TEST": "@test",
     "API_KEY": "@apiKey",
     "AUTH_DOMAIN": "@authDomain",
     "DATABASE_URL": "@databaseURL",
