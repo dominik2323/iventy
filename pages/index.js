@@ -1,6 +1,5 @@
 import { Fragment } from 'react';
 import Head from 'next/head';
-import getConfig from 'next/config';
 import firebase from 'firebase';
 import 'firebase/firestore';
 
@@ -55,18 +54,6 @@ export default function Index(props) {
 }
 
 Index.getInitialProps = async function() {
-  const { serverRuntimeConfig: serverVars } = getConfig();
-  console.log(
-    {
-      apiKey: process.env.API_KEY,
-      authDomain: process.env.AUTH_DOMAIN,
-      databaseURL: process.env.DATABASE_URL,
-      projectId: process.env.PROJECT_ID,
-      messagingSenderId: process.env.MESSAGING_SENDER_ID,
-      appId: process.env.APP_ID
-    },
-    serverVars
-  );
   if (!firebase.apps.length) {
     firebase.initializeApp({
       apiKey: process.env.API_KEY,
@@ -81,6 +68,5 @@ Index.getInitialProps = async function() {
   const contentSnapshot = await contentRef.get();
   let data;
   const contentData = contentSnapshot.forEach(task => (data = task.data()));
-  console.log({ data });
   return { data: data };
 };
