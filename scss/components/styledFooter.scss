@@ -37,6 +37,19 @@
       }
       &:hover {
         opacity: 1;
+        .circle {
+          fill: $blue;
+        }
+        .icon {
+          fill: $white;
+        }
+      }
+      .circle {
+        display: block;
+        fill: $circle-light-blue;
+      }
+      .icon {
+        fill: $blue;
       }
       width: 55px;
       height: 55px;

@@ -1,5 +1,6 @@
 import { DataContext } from '../pages';
 import { useScrollTo } from '../hooks/useScrollTo';
+import ReactSVG from 'react-svg';
 
 const Footer = () => {
   const { globals, footer, navbar, contact } = React.useContext(DataContext);
@@ -23,7 +24,7 @@ const Footer = () => {
         <p>{contact.headerForContactInfo}</p>
         <small>{name}</small>
         <small>
-          {email}
+          <a href={`mailto: ${email}`}>{email}</a>
           <br />
           {phone}
         </small>
@@ -35,22 +36,10 @@ const Footer = () => {
       </div>
       <div className={`footer__social`}>
         {social.map(({ img, url }) => {
-          const chopImg = img.split('.');
-          const imgName = chopImg[0];
-          const imgExt = chopImg[1];
           return (
-            <a
-              href={url}
-              key={url}
-              style={{
-                backgroundImage: `
-                url(/static/icons/${imgName}${
-                  hovered === url ? `_hover` : ``
-                }.${imgExt})`
-              }}
-              onMouseEnter={() => setHovered(url)}
-              onMouseLeave={() => setHovered('')}
-            />
+            <a href={url} key={url} className={`footer__social__link`}>
+              <ReactSVG src={`/static/icons/${img}`} />
+            </a>
           );
         })}
       </div>

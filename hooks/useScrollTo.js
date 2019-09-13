@@ -1,7 +1,7 @@
 export const useScrollTo = id => {
   const el = document.getElementById(id);
-  el.scrollIntoView({
+  window.scrollTo({
     behavior: 'smooth',
-    block: 'start'
+    top: el.offsetTop
   });
 };

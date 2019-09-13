@@ -2,12 +2,13 @@ import { DataContext } from '../pages/index';
 import Button from './Button';
 import posed from 'react-pose';
 import { useScrollTo } from '../hooks/useScrollTo';
+import ReactSVG from 'react-svg';
 
 const NavbarMobileContent = posed.div({
   opened: {
     opacity: 1,
     beforeChildren: true,
-    applyAtStart: { display: `block` },
+    applyAtStart: { display: `flex` },
     staggerChildren: 50,
     transition: { duration: 400 }
   },
@@ -35,7 +36,7 @@ const NavbarMobileContentItem = posed(NavItem)({
   closed: { x: 20, opacity: 0 }
 });
 
-const NavbarMobileContentSocial = posed.a({
+const NavbarMobileContentSocial = posed.div({
   opened: { x: 0, opacity: 1 },
   closed: { x: 20, opacity: 0 }
 });
@@ -80,7 +81,7 @@ const NavbarMobile = ({ globals, navbar }) => {
         <NavbarMobileContentSocial className={`navbar-mobile__content__social`}>
           {globals.social.map(({ img, url }) => (
             <a key={url} href={url}>
-              <img src={`/static/icons/${img}`} alt="" />
+              <ReactSVG src={`/static/icons/${img}`} />
             </a>
           ))}
         </NavbarMobileContentSocial>

@@ -1,6 +1,10 @@
 const Button = ({ children, handleClick, className, style }) => {
   return (
-    <button className={`btn ${className}`} onClick={handleClick} style={style}>
+    <button
+      className={`btn rl ${className}`}
+      onClick={handleClick}
+      style={style}
+    >
       {children}
     </button>
   );

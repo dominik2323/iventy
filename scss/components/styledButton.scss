@@ -1,10 +1,11 @@
 .btn {
   display: inline-block;
-  min-width: 255px;
+  // min-width: 255px;
   height: 55px;
   padding: 20px 40px;
   font-size: 18px;
   letter-spacing: 0;
+  font-weight: 700;
   line-height: 0px;
   color: $white;
   border: 0;
@@ -19,6 +20,7 @@
   }
   &--red {
     background: $red;
+    box-shadow: 5px 10px 15px rgba(195, 32, 32, 0.2);
   }
   &--ghost {
     background: transparent;
@@ -33,5 +35,9 @@
       border: 1px solid $red;
       color: $red;
     }
+  }
+  @media screen and (max-width: 768px) {
+    min-width: auto;
+    padding: 20px;
   }
 }

@@ -25,7 +25,7 @@ const Hero = () => {
         <Button
           key={btns[1].target}
           handleClick={() => useScrollTo(btns[1].target)}
-          className={`btn--ghost btn--ghost--red`}
+          className={`btn--ghost`}
         >
           {btns[1].displayName}
         </Button>

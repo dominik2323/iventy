@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55">
   <g id="facebook" transform="translate(-1260 -10064.5)">
-    <rect id="Rectangle_101" data-name="Rectangle 101" width="55" height="55" rx="27.5" transform="translate(1260 10064.5)" fill="#edeef1"/>
-    <g id="facebook-logo" transform="translate(1258.923 10080.5)">
-      <path id="Path_8" data-name="Path 8" d="M34.564,0,31.452,0C27.955,0,25.7,2.318,25.7,5.906V8.63H22.566a.489.489,0,0,0-.489.49v3.946a.489.489,0,0,0,.489.489H25.7v9.956a.489.489,0,0,0,.489.489h4.083a.489.489,0,0,0,.489-.489V13.554h3.659a.489.489,0,0,0,.489-.489V9.119a.49.49,0,0,0-.49-.49h-3.66V6.321c0-1.11.264-1.673,1.71-1.673h2.1a.489.489,0,0,0,.489-.489V.494A.49.49,0,0,0,34.564,0Z" fill="#3a486a"/>
+    <rect id="Rectangle_101" class="circle" data-name="Rectangle 101" width="55" height="55" rx="27.5" transform="translate(1260 10064.5)"/>
+    <g id="facebook-logo" class="icon" transform="translate(1258.923 10080.5)">
+      <path id="Path_8" data-name="Path 8" d="M34.564,0,31.452,0C27.955,0,25.7,2.318,25.7,5.906V8.63H22.566a.489.489,0,0,0-.489.49v3.946a.489.489,0,0,0,.489.489H25.7v9.956a.489.489,0,0,0,.489.489h4.083a.489.489,0,0,0,.489-.489V13.554h3.659a.489.489,0,0,0,.489-.489V9.119a.49.49,0,0,0-.49-.49h-3.66V6.321c0-1.11.264-1.673,1.71-1.673h2.1a.489.489,0,0,0,.489-.489V.494A.49.49,0,0,0,34.564,0Z"/>
     </g>
   </g>
 </svg>
