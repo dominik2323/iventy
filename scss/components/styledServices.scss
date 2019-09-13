@@ -27,12 +27,17 @@
     margin-top: 0;
     &__service {
       margin: 100px 0;
+      flex-direction: column-reverse;
+      text-align: left;
       &:nth-child(2n) {
         flex-direction: column-reverse;
       }
-      flex-direction: column-reverse;
       &__content {
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        h2 {
+          font-size: 30px;
+        }
       }
       &__img {
         img {

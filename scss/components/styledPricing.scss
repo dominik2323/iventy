@@ -84,12 +84,17 @@
 
     &__items {
       flex-direction: column;
-      padding: 0 15px;
+      // padding: 0 15px;
       &__item {
         width: 100%;
         margin-bottom: 150px;
         &:not(:last-child) {
           margin-right: 0px;
+        }
+        li {
+          text-align: left;
+          line-height: 24px;
+          margin-bottom: 8px;
         }
       }
     }
