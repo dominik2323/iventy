@@ -1,12 +1,11 @@
 {
-  "build": {
-    "env": {
-      "apiKey": "@apiKey",
-      "authDomain": "@authDomain",
-      "databaseURL": "@databaseURL",
-      "projectId": "@projectId",
-      "messagingSenderId": "@messagingSenderId",
-      "appId": "@appId"
-    }
+  "env": {
+    "TEST": "@test",
+    "API_KEY": "@apiKey",
+    "AUTH_DOMAIN": "@authDomain",
+    "DATABASE_URL": "@databaseURL",
+    "PROJECT_ID": "@projectId",
+    "MESSAGING_SENDER_ID": "@messagingSenderId",
+    "APP_ID": "@appId"
   }
 }
