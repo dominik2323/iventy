@@ -1,3 +1,4 @@
+// smth
 const Circle = ({ size, side, color, x = 0, y = 0 }) => {
   return (
     <div
