@@ -56,14 +56,20 @@ export default function Index(props) {
 
 Index.getInitialProps = async function() {
   const { serverRuntimeConfig: serverVars } = getConfig();
-  console.log(process.env.apiKey);
+  console.log({
+    apiKey: process.env.apiKey,
+    authDomain: process.env.authDomain,
+    databaseURL: process.env.databaseURL,
+    projectId: process.env.projectId,
+    messagingSenderId: process.env.messagingSenderId,
+    appId: process.env.appId
+  });
   if (!firebase.apps.length) {
     firebase.initializeApp({
       apiKey: process.env.apiKey,
       authDomain: process.env.authDomain,
       databaseURL: process.env.databaseURL,
       projectId: process.env.projectId,
-      storageBucket: process.env.storageBucket,
       messagingSenderId: process.env.messagingSenderId,
       appId: process.env.appId
     });
@@ -72,5 +78,6 @@ Index.getInitialProps = async function() {
   const contentSnapshot = await contentRef.get();
   let data;
   const contentData = contentSnapshot.forEach(task => (data = task.data()));
+  console.log({ data });
   return { data: data };
 };
