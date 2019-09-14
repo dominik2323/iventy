@@ -24,6 +24,11 @@ export default function Index(props) {
     <DataContext.Provider value={data}>
       <Head>
         <title>Iventy</title>
+        <link
+          rel="shortcut icon"
+          type="image/x-icon"
+          href="/static/icons/favicon.ico"
+        />
       </Head>
       <div className="c">
         <Navbar />
