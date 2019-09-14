@@ -1,5 +1,5 @@
 // smth
-const Circle = ({ size, side, color, x = 0, y = 0 }) => {
+const Circle = ({ size, side, color, x = 0, y = 0, forMobile }) => {
   return (
     <div
       className={`
@@ -7,6 +7,7 @@ const Circle = ({ size, side, color, x = 0, y = 0 }) => {
         ${size}
         ${side}
         ${color}
+        ${forMobile ? `for-mobile` : ``}
       `}
       style={{ transform: `translate(${x}px, ${y}px)` }}
     />

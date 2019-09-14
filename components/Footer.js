@@ -26,7 +26,7 @@ const Footer = () => {
         <small>
           <a href={`mailto: ${email}`}>{email}</a>
           <br />
-          {phone}
+          <a href={`tel: ${phone}`}>{phone}</a>
         </small>
         <small>
           {companyName}

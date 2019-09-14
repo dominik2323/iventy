@@ -3,6 +3,24 @@ import Button from './Button';
 import posed from 'react-pose';
 import { useScrollTo } from '../hooks/useScrollTo';
 import ReactSVG from 'react-svg';
+import { useShowNav } from '../hooks/useShowNav';
+
+const NavbarContainer = posed.div({
+  show: {
+    y: 0,
+    applyAtStart: {
+      position: 'fixed',
+      padding: '10px 15px',
+      background: 'rgba(255,255,255,0.8)'
+    },
+    transition: { duration: 500 }
+  },
+  hide: {
+    y: -200,
+    applyAtEnd: { position: 'fixed' },
+    transition: { duration: 500 }
+  }
+});
 
 const NavbarMobileContent = posed.div({
   opened: {
@@ -43,12 +61,18 @@ const NavbarMobileContentSocial = posed.div({
 
 const NavbarMobile = ({ globals, navbar }) => {
   const [isNavOpen, toggleNav] = React.useState(false);
+  const showNav = useShowNav();
   const { items } = navbar;
+  React.useEffect(() => {
+    if (!showNav) {
+      toggleNav(false);
+    }
+  }, [showNav]);
   return (
     <div className={`navbar-mobile rl`}>
-      <div
+      <NavbarContainer
+        pose={showNav ? `show` : `hide`}
         className={`navbar-mobile__topbar`}
-        style={isNavOpen ? { position: `fixed`, right: 15, left: 15 } : {}}
       >
         <img
           className={`navbar-mobile__topbar__brand`}
@@ -60,9 +84,9 @@ const NavbarMobile = ({ globals, navbar }) => {
           src={`/static/icons/${isNavOpen ? `close` : `burger`}.svg`}
           onClick={() => toggleNav(!isNavOpen)}
         />
-      </div>
+      </NavbarContainer>
       <NavbarMobileContent
-        pose={isNavOpen ? `opened` : `closed`}
+        pose={isNavOpen && showNav ? `opened` : `closed`}
         className={`navbar-mobile__content`}
       >
         <div className={`navbar-mobile__content__items`}>

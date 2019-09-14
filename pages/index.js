@@ -27,6 +27,13 @@ export default function Index(props) {
       </Head>
       <div className="c">
         <Navbar />
+        <Circle
+          size={`large`}
+          color={`dark-blue`}
+          side={`left`}
+          y={250}
+          forMobile
+        />
         <Hero />
         <Circle size={`small`} color={`dark-blue`} side={`left`} y={-300} />
         <Header
@@ -41,9 +48,24 @@ export default function Index(props) {
         <Circle size={`large`} color={`dark-blue`} side={`right`} y={-600} />
         <References />
         <Circle size={`small`} color={`red`} side={`left`} y={-600} />
+        <Circle size={`large`} color={`red`} side={`left`} y={-200} forMobile />
         <Contact />
         <Circle size={`small`} color={`orange`} side={`right`} y={-800} />
+        <Circle
+          size={`large`}
+          color={`orange`}
+          side={`right`}
+          y={-90}
+          forMobile
+        />
         <Insta />
+        <Circle
+          size={`large`}
+          color={`yellow`}
+          side={`right`}
+          y={40}
+          forMobile
+        />
         <Footer />
         <div className={`mask-circle`}>
           <Circle size={`small`} color={`yellow`} side={`left`} />

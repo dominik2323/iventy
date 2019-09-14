@@ -11,7 +11,9 @@ const Contact = () => {
         <div className={`contact__email`}>
           <a href={`mailto: ${globals.email}`}>{globals.email}</a>
         </div>
-        <div className={`contact__phone`}>{globals.phone}</div>
+        <div className={`contact__phone`}>
+          <a href={`tel: ${globals.phone}`}>{globals.phone}</a>
+        </div>
       </div>
     </div>
   );

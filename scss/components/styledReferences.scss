@@ -35,6 +35,7 @@
       }
     }
     &__arrows {
+      z-index: 1;
       &--left,
       &--right {
         width: 65px;

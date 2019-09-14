@@ -23,7 +23,7 @@
     box-shadow: 5px 10px 15px rgba(195, 32, 32, 0.2);
   }
   &--ghost {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.8);
     border: 1px solid $gray;
     color: $blue;
     &:hover {
