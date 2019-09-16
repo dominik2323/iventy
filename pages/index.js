@@ -32,13 +32,6 @@ export default function Index(props) {
       </Head>
       <div className="c">
         <Navbar />
-        <Circle
-          size={`large`}
-          color={`dark-blue`}
-          side={`left`}
-          y={250}
-          forMobile
-        />
         <Hero />
         <Circle size={`small`} color={`dark-blue`} side={`left`} y={-300} />
         <Header

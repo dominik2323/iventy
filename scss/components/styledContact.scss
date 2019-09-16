@@ -5,19 +5,17 @@
   color: $blue;
   margin-bottom: 290px;
   &__email {
-    border: 2px solid $red;
-    border-radius: 10px;
-    padding: 30px 70px 20px;
-    font-size: 40px;
-    line-height: 1em;
-    display: inline-block;
-    margin-bottom: 40px;
     a {
+      border: 2px solid $red;
+      border-radius: 10px;
+      font-size: 40px;
+      padding: 30px 70px 20px;
       line-height: 0;
     }
   }
   &__phone {
     font-size: 22px;
+    margin-top: 80px;
     &:before {
       content: '';
       display: inline-block;
@@ -32,8 +30,14 @@
   @media screen and (max-width: 1100px) {
     margin-bottom: 0;
     &__email {
-      font-size: 26px;
-      padding: 30px 30px 20px;
+      a {
+        font-size: 20px;
+        padding: 20px 30px 15px;
+      }
+    }
+    &__phone {
+      margin-top: 40px;
+      font-size: 20px;
     }
   }
 }

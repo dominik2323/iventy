@@ -26,20 +26,24 @@ const Insta = () => {
   const { instagram } = React.useContext(DataContext);
   if (json === null) return null;
   const data = json.data.splice(0, 3);
-  const stripHashtags = string => {
+  const formatString = string => {
     const regexp = new RegExp('#([^\\s]*)', 'g');
-    return string.replace(regexp, '');
+    const resultString = string.replace(regexp, '');
+    if (resultString.length > 200) {
+      return `${resultString.slice(0, 200)} ...`;
+    }
+    return resultString;
   };
   return (
     <React.Fragment>
       <Header header={instagram.header} />
       <div className={`insta rl`}>
         {data.map(({ images, user, created_time, caption, link, id }) => (
-          <a className={`insta__item`} href={link} key={id}>
+          <a className={`insta__item`} href={link} key={id} target="_blank">
             <img src={images.standard_resolution.url} alt="" />
             <p>
               <b>{`${user.full_name}\u2001`}</b>
-              {stripHashtags(caption.text)}
+              {formatString(caption.text)}
             </p>
             <small>
               <ReactTimeAgo date={created_time * 1000} locale={`cs`} />
