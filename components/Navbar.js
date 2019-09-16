@@ -129,9 +129,12 @@ const Navbar = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  if (width < 1100) {
+  if (width === 0) {
+    return null;
+  } else if (width < 1100) {
     return <NavbarMobile navbar={navbar} globals={globals} />;
   }
+
   return (
     <div className={`navbar rl`}>
       <div className={`navbar__brand`}>
