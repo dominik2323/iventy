@@ -5,7 +5,7 @@ export function useShowNav() {
 
   let prevScrollPos = 0;
   const handleScroll = e => {
-    if (window.scrollY <= prevScrollPos) {
+    if (window.scrollY <= prevScrollPos || window.scrollY < 50) {
       toggleNav(true);
     } else {
       toggleNav(false);
