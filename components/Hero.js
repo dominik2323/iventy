@@ -33,11 +33,12 @@ const Hero = () => {
       <div className={`hero__bg`}>
         <img src={`/static/img/${img}`} alt="" />
       </div>
-      <div
-        className={`hero__scroll`}
-        onClick={() => useScrollTo(btns[1].target)}
-      >
-        <img src={`/static/icons/scrollDown.svg`} alt="" />
+      <div className={`hero__scroll`}>
+        <img
+          src={`/static/icons/scrollDown.svg`}
+          alt=""
+          onClick={() => useScrollTo(btns[1].target)}
+        />
       </div>
     </div>
   );

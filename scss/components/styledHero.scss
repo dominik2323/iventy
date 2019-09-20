@@ -2,6 +2,7 @@
   height: calc(100vh - 86px);
   display: flex;
   align-items: center;
+  // position: relative;
   &__header {
     h1 {
       width: 650px;
@@ -31,6 +32,7 @@
     }
   }
   &__scroll {
+    display: none;
     position: absolute;
     margin: auto;
     left: 0;

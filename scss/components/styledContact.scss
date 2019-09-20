@@ -5,18 +5,19 @@
   color: $blue;
   margin-bottom: 290px;
   &__email {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // height: 84px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    border: 2px solid $red;
+    border-radius: 10px;
+    font-size: 40px;
+    padding: 7px 50px 0;
     a {
-      display: inline-block;
-      font-size: 40px;
-      padding: 40px 50px 35px;
-      border-radius: 10px;
-      border: 2px solid $red;
+      // display: inline-block;
+      // padding: 40px 50px 35px;
       // padding: 30px 70px 20px;
-      line-height: 40px;
+      // line-height: 40px;
     }
   }
   &__phone {
