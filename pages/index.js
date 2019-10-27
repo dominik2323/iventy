@@ -1,8 +1,8 @@
 import { Fragment } from 'react';
 import Head from 'next/head';
-// import firebase from 'firebase';
-// import 'firebase/firestore';
-// import config from '../config/config';
+
+import firebase from 'firebase';
+import 'firebase/firestore';
 
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';

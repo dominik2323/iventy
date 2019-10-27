@@ -1,7 +1,5 @@
 import React from 'react';
 import App from 'next/app';
-import firebase from 'firebase';
-import 'firebase/firestore';
 
 class MyApp extends App {
   // constructor(props) {
