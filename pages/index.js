@@ -74,3 +74,23 @@ export default function Index(props) {
     </DataContext.Provider>
   );
 }
+Index.getInitialProps = async () => {
+  let firebaseConfig = {
+    apiKey: process.env.API_KEY,
+    authDomain: process.env.AUTH_DOMAIN,
+    databaseURL: process.env.DATABASE_URL,
+    projectId: process.env.PROJECT_ID,
+    storageBucket: process.env.STORAGE_BUCKET,
+    messagingSenderId: process.env.MESSAGING_SENDER_ID,
+    appId: process.env.APP_ID
+  };
+
+  if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+  }
+  const contentRef = firebase.firestore().collection('content');
+  const contentSnapshot = await contentRef.get();
+  let data;
+  const contentData = contentSnapshot.forEach(task => (data = task.data()));
+  return { data: contentData };
+};
