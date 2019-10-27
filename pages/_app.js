@@ -11,9 +11,9 @@ class MyApp extends App {
 
   async componentDidMount() {
     let firebaseConfig;
-    if (process.env.NODE_ENV === `development`) {
-      const devConfig = await import(`../config/config.js`);
-      firebaseConfig = devConfig.default;
+    if (false) {
+      // const devConfig = await import(`../config/config.js`);
+      // firebaseConfig = devConfig.default;
     } else {
       return {
         apiKey: process.env.API_KEY,
