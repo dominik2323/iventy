@@ -44,9 +44,14 @@
           fill: $white;
         }
       }
+      &:active {
+        .circle {
+          fill: $blue-click;
+        }
+      }
       .circle {
         display: block;
-        fill: $circle-light-blue;
+        fill: $light-gray;
       }
       .icon {
         fill: $blue;
@@ -60,7 +65,7 @@
     margin: 90px 0 30px;
     text-align: center;
   }
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 992px) {
     flex-direction: column;
     margin: 0 20px;
     &__nav {

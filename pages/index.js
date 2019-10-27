@@ -1,7 +1,8 @@
 import { Fragment } from 'react';
 import Head from 'next/head';
-import firebase from 'firebase';
-import 'firebase/firestore';
+// import firebase from 'firebase';
+// import 'firebase/firestore';
+// import config from '../config/config';
 
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
@@ -20,6 +21,7 @@ export const DataContext = React.createContext();
 
 export default function Index(props) {
   const { data } = props;
+  if (data === null) return null;
   return (
     <DataContext.Provider value={data}>
       <Head>
@@ -72,21 +74,3 @@ export default function Index(props) {
     </DataContext.Provider>
   );
 }
-
-Index.getInitialProps = async function() {
-  if (!firebase.apps.length) {
-    firebase.initializeApp({
-      apiKey: process.env.API_KEY,
-      authDomain: process.env.AUTH_DOMAIN,
-      databaseURL: process.env.DATABASE_URL,
-      projectId: process.env.PROJECT_ID,
-      messagingSenderId: process.env.MESSAGING_SENDER_ID,
-      appId: process.env.APP_ID
-    });
-  }
-  const contentRef = firebase.firestore().collection('content');
-  const contentSnapshot = await contentRef.get();
-  let data;
-  const contentData = contentSnapshot.forEach(task => (data = task.data()));
-  return { data: data };
-};

@@ -28,11 +28,11 @@ const Footer = () => {
           <br />
           <a href={`tel: ${phone}`}>{phone}</a>
         </small>
-        <small>
+        {/*<small>
           {companyName}
           <br />
           {address}
-        </small>
+        </small>*/}
       </div>
       <div className={`footer__social`}>
         {social.map(({ img, url }) => {

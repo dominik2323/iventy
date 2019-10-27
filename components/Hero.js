@@ -7,6 +7,8 @@ const Hero = () => {
   const { hero } = React.useContext(DataContext);
   const { header, btns, img } = hero;
   const regexp = /\*\*(.*?)\*\*/g;
+  // return random number from 1 to 4
+  const randomNum = Math.floor(Math.random() * 4) + 1;
   return (
     <div className={`hero`}>
       <div className={`hero__header`}>
@@ -18,20 +20,20 @@ const Hero = () => {
         <Button
           key={btns[0].target}
           handleClick={() => useScrollTo(btns[0].target)}
-          className={`btn--red`}
+          className={`btn--primary`}
         >
           {btns[0].displayName}
         </Button>
         <Button
           key={btns[1].target}
           handleClick={() => useScrollTo(btns[1].target)}
-          className={`btn--ghost`}
+          className={`btn--secondary`}
         >
           {btns[1].displayName}
         </Button>
       </div>
       <div className={`hero__bg`}>
-        <img src={`/static/img/${img}`} alt="" />
+        <img src={`/static/img/${randomNum}_${img}`} alt="" />
       </div>
       <div className={`hero__scroll`}>
         <img

@@ -3,10 +3,28 @@ import { useScrollTo } from '../hooks/useScrollTo';
 import posed from 'react-pose';
 import Header from './Header';
 import Button from './Button';
+import ReactSVG from 'react-svg';
 
 const PosedItem = posed.div({
-  hovered: { y: -10, boxShadow: '5px 10px 50px rgba(80, 76, 114, 0.2)' },
-  default: { y: 0, boxShadow: '5px 10px 8px rgba(80, 76, 114, 0.2)' }
+  hovered: {
+    y: -10,
+    boxShadow: '5px 10px 50px rgba(80, 76, 114, 0.2)',
+    scale: 1.01
+  },
+  default: { y: 0, boxShadow: '5px 10px 8px rgba(80, 76, 114, 0.2)', scale: 1 }
+});
+
+const PosedIcon = posed.div({
+  hovered: {
+    boxShadow: '0px 20px 20px rgba(80, 76, 114, 0.2)',
+    scale: 1.1,
+    y: -20
+  },
+  default: {
+    boxShadow: '0px 10px 10px rgba(80, 76, 114, 0.2)',
+    scale: 1,
+    y: 0
+  }
 });
 
 const Pricing = () => {
@@ -26,7 +44,14 @@ const Pricing = () => {
             onMouseEnter={e => setHover(e.currentTarget.id)}
             onMouseLeave={() => setHover('')}
           >
-            <img src={`/static/icons/${img}`} alt="" />
+            <PosedIcon
+              className={`pricing__items__item__icon ${
+                hover === id ? `hovered` : `default`
+              }`}
+              pose={hover === id ? `hovered` : `default`}
+            >
+              <ReactSVG src={`/static/icons/${img}`} alt="" />
+            </PosedIcon>
             <h4>{name}</h4>
             <p>
               <span className={`qc`}>{`${price} ${currency}`}</span>
@@ -38,7 +63,7 @@ const Pricing = () => {
               ))}
             </ul>
             <Button
-              className={`btn--ghost btn--ghost--red`}
+              className={`btn--secondary`}
               handleClick={() => useScrollTo('contact')}
             >
               {btn}

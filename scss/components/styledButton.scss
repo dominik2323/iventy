@@ -1,6 +1,5 @@
 .btn {
   display: inline-block;
-  // min-width: 255px;
   height: 55px;
   padding: 20px 40px;
   font-size: 18px;
@@ -9,36 +8,53 @@
   line-height: 0px;
   color: $white;
   border: 0;
+  background-color: transparent;
   border-radius: calc(55px / 2);
   cursor: pointer;
   &:hover {
     opacity: 0.9;
   }
-  &--blue {
-    width: auto;
-    background: $blue;
-  }
-  &--red {
-    background: $red;
+  &--primary {
+    background-color: $red;
     box-shadow: 5px 10px 15px rgba(195, 32, 32, 0.2);
-  }
-  &--ghost {
-    background: rgba(255, 255, 255, 0.8);
-    border: 1px solid $gray;
-    color: $blue;
     &:hover {
-      background: $red;
-      border: 1px solid $red;
+      background-color: $red-hover;
+    }
+    &:active {
+      background-color: $red-click;
+    }
+  }
+  &--secondary {
+    border: 2px solid $red;
+    color: $red;
+    &:hover {
+      border: 2px solid $red-hover;
+      background-color: $red-hover;
       color: $white;
     }
-    &--red {
-      border: 1px solid $red;
-      color: $red;
+    &:active {
+      border: 2px solid $red-click;
+      background-color: $red-click;
+    }
+  }
+  &--contact {
+    background-color: $light-gray;
+    color: $blue;
+    &:hover {
+      color: $white;
+      background-color: $blue;
+    }
+    &:active {
+      background-color: $blue-click;
     }
   }
   @media screen and (max-width: 768px) {
-    min-width: 55px;
-    flex-shrink: 0;
-    padding: 0px 5px;
+    // min-width: 55px;
+    // flex-shrink: 0;
+    padding: 0px 20px;
+  }
+  @media screen and (max-width: 540px) {
+    height: 45px;
+    font-size: 16px;
   }
 }

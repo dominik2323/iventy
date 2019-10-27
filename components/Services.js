@@ -16,7 +16,7 @@ const Services = () => {
             <h2 className={`qc`}>{header}</h2>
             <p className={`rl`}>{paragraph}</p>
             <Button
-              className={`btn--ghost btn--ghost--red`}
+              className={`btn--secondary`}
               handleClick={() => useScrollTo('contact')}
             >
               {btn}

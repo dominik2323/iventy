@@ -23,7 +23,16 @@
       }
     }
   }
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 992px) {
+    margin-top: 200px;
+    &__service {
+      &__img img {
+        width: 40vw;
+        height: 40vw;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
     margin-top: 0;
     &__service {
       margin: 100px 0;
@@ -35,6 +44,7 @@
       &__content {
         display: flex;
         flex-direction: column;
+        align-items: center;
         h2 {
           font-size: 30px;
         }

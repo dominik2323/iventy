@@ -22,13 +22,21 @@
       margin: 20px 0 50px;
     }
   }
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 992px) {
     flex-direction: column;
     &__member {
+      width: 100%;
       &:nth-child(3) {
         margin-top: 70px;
       }
-      width: 100%;
+      img {
+        width: 80%;
+        max-width: 600px;
+        margin: auto;
+        margin-bottom: 50px;
+        display: block;
+      }
+
       li {
         line-height: 24px;
         margin-bottom: 12px;

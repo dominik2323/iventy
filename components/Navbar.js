@@ -131,7 +131,7 @@ const Navbar = () => {
 
   if (width === 0) {
     return null;
-  } else if (width < 1100) {
+  } else if (width <= 992) {
     return <NavbarMobile navbar={navbar} globals={globals} />;
   }
 
@@ -147,7 +147,7 @@ const Navbar = () => {
               <Button
                 key={id}
                 handleClick={() => useScrollTo(id)}
-                className={`btn--blue`}
+                className={`btn--contact`}
               >
                 {displayName}
               </Button>

@@ -10,16 +10,11 @@
     align-items: center;
     height: 90px;
     border: 2px solid $red;
-    border-radius: 10px;
+    border-radius: 45px;
     font-size: 40px;
-    // padding: 0px 50px 0;
     width: 450px;
     a {
       margin-top: 7px;
-      // display: inline-block;
-      // padding: 40px 50px 35px;
-      // padding: 30px 70px 20px;
-      // line-height: 40px;
     }
   }
   &__phone {
@@ -36,15 +31,13 @@
       top: 4px;
     }
   }
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 992px) {
     margin-bottom: 0;
     &__email {
       height: 60px;
-      width: 210px;
+      width: 240px;
       font-size: 20px;
       a {
-        // padding: 20px 30px 15px;
-        // line-height: 20px;
         margin-top: 0px;
       }
     }
