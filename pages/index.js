@@ -74,7 +74,7 @@ export default function Index(props) {
     </DataContext.Provider>
   );
 }
-Index.getInitialProps = async () => {
+Index.getInitialProps = async function() {
   let firebaseConfig = {
     apiKey: process.env.API_KEY,
     authDomain: process.env.AUTH_DOMAIN,
@@ -92,5 +92,6 @@ Index.getInitialProps = async () => {
   const contentSnapshot = await contentRef.get();
   let data;
   const contentData = contentSnapshot.forEach(task => (data = task.data()));
-  return { data: contentData };
+  console.log(contentData);
+  return { data: data };
 };

@@ -1,7 +1,10 @@
 .c {
-  width: 992px;
+  width: 1100px;
   margin: auto;
   padding: 0 40px;
+  @media screen and (max-width: 1100px) {
+    width: 992px;
+  }
   @media screen and (max-width: 992px) {
     width: 100vw;
     margin: 0;
