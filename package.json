@@ -15,7 +15,7 @@
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "firebase": "^6.5.0",
-    "firebase-admin": "^8.4.0",
+    "firebase-admin": "^11.4.1",
     "next": "^9.0.5",
     "node-sass": "^4.12.0",
     "react": "^16.9.0",
